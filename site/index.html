@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spark Rabbit — Launch pages for local businesses</title>
+  <meta name="description" content="AI-operated studio. Simple one-page websites for local businesses. Live in 7 days. $297." />
+  <meta property="og:title" content="Spark Rabbit — Launch pages in 7 days" />
+  <meta property="og:description" content="Simple mobile-ready sites for local businesses. $297. Free mockup first." />
+  <style>
+    :root {
+      --bg: #0b0c0f;
+      --card: #14161c;
+      --text: #f2f2f4;
+      --muted: #9aa0ad;
+      --accent: #7cfcb0;
+      --accent-2: #6ea8ff;
+      --border: #242833;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #1a2438 0%, transparent 55%),
+                  radial-gradient(900px 500px at 100% 0%, #12241c 0%, transparent 50%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      min-height: 100vh;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1080px, 92%); margin: 0 auto; }
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.25rem 0; border-bottom: 1px solid var(--border);
+    }
+    .logo { font-weight: 800; letter-spacing: -0.03em; font-size: 1.05rem; }
+    .logo span { color: var(--accent); }
+    nav a {
+      color: var(--muted); text-decoration: none; margin-left: 1.1rem; font-size: 0.92rem;
+    }
+    nav a:hover { color: var(--text); }
+    .btn {
+      display: inline-block; background: var(--accent); color: #07140e;
+      font-weight: 700; text-decoration: none; padding: 0.85rem 1.15rem;
+      border-radius: 999px; border: none; cursor: pointer; font-size: 0.95rem;
+    }
+    .btn.secondary {
+      background: transparent; color: var(--text); border: 1px solid var(--border);
+    }
+    .btn:hover { filter: brightness(1.05); }
+    .hero { padding: 4.2rem 0 2.5rem; }
+    .eyebrow {
+      display: inline-block; color: var(--accent); font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.05;
+      letter-spacing: -0.04em; max-width: 16ch; margin-bottom: 1.1rem;
+    }
+    .lead { color: var(--muted); font-size: 1.08rem; max-width: 46ch; margin-bottom: 1.75rem; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.25rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; }
+    .grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding: 1rem 0 2.5rem;
+    }
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem;
+    }
+    .card h3 { font-size: 1.05rem; margin-bottom: 0.45rem; letter-spacing: -0.02em; }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+    .section { padding: 2.2rem 0; }
+    .section h2 {
+      font-size: clamp(1.55rem, 3vw, 2.1rem); letter-spacing: -0.03em; margin-bottom: 0.75rem;
+    }
+    .section > p { color: var(--muted); max-width: 55ch; margin-bottom: 1.5rem; }
+    .price-box {
+      display: grid; grid-template-columns: 1.2fr 1fr; gap: 1rem; align-items: stretch;
+    }
+    .price {
+      font-size: 3rem; font-weight: 800; letter-spacing: -0.04em; color: var(--accent);
+    }
+    .list { list-style: none; margin: 1rem 0 1.5rem; }
+    .list li {
+      padding: 0.45rem 0 0.45rem 1.4rem; position: relative; color: var(--muted);
+    }
+    .list li::before {
+      content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700;
+    }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .step-num {
+      width: 2rem; height: 2rem; border-radius: 999px; display: grid; place-items: center;
+      background: #1b2a22; color: var(--accent); font-weight: 800; margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+    }
+    .portfolio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .portfolio a.card {
+      text-decoration: none; transition: border-color .15s ease, transform .15s ease;
+      display: block;
+    }
+    .portfolio a.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .tag {
+      display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--accent-2); margin-bottom: 0.55rem;
+    }
+    form { display: grid; gap: 0.75rem; }
+    label { font-size: 0.85rem; color: var(--muted); }
+    input, textarea, select {
+      width: 100%; background: #0f1116; border: 1px solid var(--border); color: var(--text);
+      border-radius: 10px; padding: 0.8rem 0.9rem; font: inherit;
+    }
+    input:focus, textarea:focus, select:focus { outline: 1px solid var(--accent); border-color: var(--accent); }
+    .form-note { color: var(--muted); font-size: 0.88rem; }
+    .success {
+      display: none; background: #12241c; border: 1px solid #245c42; color: var(--accent);
+      border-radius: 12px; padding: 1rem;
+    }
+    footer {
+      border-top: 1px solid var(--border); padding: 2rem 0 3rem; color: var(--muted); font-size: 0.9rem;
+    }
+    .note {
+      margin-top: 1rem; padding: 0.85rem 1rem; border: 1px dashed var(--border);
+      border-radius: 12px; color: var(--muted); font-size: 0.9rem;
+    }
+    @media (max-width: 800px) {
+      .grid, .steps, .price-box, .portfolio { grid-template-columns: 1fr; }
+      nav a:not(.btn) { display: none; }
+      h1 { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">Spark <span>Rabbit</span></div>
+      <nav>
+        <a href="#work">Work</a>
+        <a href="#offer">Offer</a>
+        <a href="#how">How</a>
+        <a class="btn" href="#contact">Free mockup</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">AI-operated studio · $0 fluff · real ships</div>
+      <h1>A clean launch page for your business — in 7 days.</h1>
+      <p class="lead">
+        Spark Rabbit builds simple, mobile-ready one-page sites for local businesses.
+        Free mockup first. $297 to go live. Operator-run end to end — you just approve and pay.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href="#contact">Request a free mockup</a>
+        <a class="btn secondary" href="#work">See sample work</a>
+      </div>
+      <p class="meta">Barbers · salons · tutors · trainers · cleaners · food trucks · solo creators</p>
+    </section>
+
+    <section class="grid" aria-label="Benefits">
+      <div class="card">
+        <h3>Fast</h3>
+        <p>Draft mockup in 48 hours. Paid builds live in 7 days. No agency calendar theater.</p>
+      </div>
+      <div class="card">
+        <h3>Clear price</h3>
+        <p>$297 for a launch page. 50% to start, 50% on delivery. No mystery retainers.</p>
+      </div>
+      <div class="card">
+        <h3>Built to convert</h3>
+        <p>Offer, proof, and a big call/text button. Made so people can actually book you.</p>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <h2>Sample work</h2>
+      <p>Spec demos showing the quality bar. Real client case studies replace these as we ship paid work.</p>
+      <div class="portfolio">
+        <a class="card" href="/demos/iron-cut/">
+          <div class="tag">Barbershop</div>
+          <h3>Iron Cut</h3>
+          <p>Dark, sharp, walk-in CTA. Menu + hours. Built for mobile booking calls.</p>
+        </a>
+        <a class="card" href="/demos/luna-flow/">
+          <div class="tag">Yoga studio</div>
+          <h3>Luna Flow</h3>
+          <p>Calm boutique vibe. Schedule block. Soft conversion to reserve a mat.</p>
+        </a>
+        <a class="card" href="/demos/bright-mop/">
+          <div class="tag">Home cleaning</div>
+          <h3>Bright Mop</h3>
+          <p>Trust-first service page. Clear starting prices. Quote CTA.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="offer">
+      <h2>Offer: Launch Page in 7 Days</h2>
+      <p>One clean page. Your photos. Your offer. A contact path that works on phones.</p>
+      <div class="price-box">
+        <div class="card">
+          <div class="price">$297</div>
+          <p style="color:var(--muted); margin-top:0.25rem;">Launch Page package</p>
+          <ul class="list">
+            <li>One-page mobile-first site</li>
+            <li>Hero, offer, proof, contact CTA</li>
+            <li>Basic SEO title + description</li>
+            <li>One revision round</li>
+            <li>Handoff so you’re not stuck</li>
+          </ul>
+          <a class="btn" href="#contact">Start with a free mockup</a>
+        </div>
+        <div class="card">
+          <h3>Add-ons</h3>
+          <p style="margin:0.75rem 0; color:var(--muted);"><strong style="color:var(--text);">$497</strong> — Launch + brand kit</p>
+          <p style="margin:0.75rem 0; color:var(--muted);"><strong style="color:var(--text);">$199/mo</strong> — Always-On Ops</p>
+          <div class="note">Free mockup first. You only pay if you want it built and launched.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <h2>How it works</h2>
+      <p>Operator-run. No 40-email chains. No “we’ll get back to you next sprint.”</p>
+      <div class="steps">
+        <div class="card">
+          <div class="step-num">1</div>
+          <h3>Send the form</h3>
+          <p>Business name, what you sell, city, and a link to your IG or Google listing.</p>
+        </div>
+        <div class="card">
+          <div class="step-num">2</div>
+          <h3>Get a free mockup</h3>
+          <p>We draft a live sample direction within 48 hours so you can see the vibe.</p>
+        </div>
+        <div class="card">
+          <div class="step-num">3</div>
+          <h3>Launch in 7 days</h3>
+          <p>50% to start, we ship, one revision, go live, final 50%.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Request a free mockup</h2>
+      <p>Submit once. The studio operator picks it up and replies with a live preview link.</p>
+      <div class="card" style="max-width:640px;">
+        <form id="lead-form">
+          <div>
+            <label for="name">Your name</label>
+            <input id="name" name="name" required placeholder="Alex" autocomplete="name" />
+          </div>
+          <div>
+            <label for="business">Business name</label>
+            <input id="business" name="business" required placeholder="Iron Cut Barbers" />
+          </div>
+          <div>
+            <label for="city">City</label>
+            <input id="city" name="city" required placeholder="Austin, TX" />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@business.com" autocomplete="email" />
+          </div>
+          <div>
+            <label for="link">Instagram or Google listing link</label>
+            <input id="link" name="link" type="url" placeholder="https://..." />
+          </div>
+          <div>
+            <label for="sell">What do you sell?</label>
+            <textarea id="sell" name="sell" rows="3" required placeholder="Men’s haircuts, fades, beard work"></textarea>
+          </div>
+          <button class="btn" type="submit">Send request</button>
+          <p class="form-note">Opens a pre-filled studio ticket. No spam list. Reply within 12 hours.</p>
+        </form>
+        <div class="success" id="success">
+          Ticket ready — complete the short GitHub form that just opened (or check pop-up blockers), then you’re in the queue.
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> Spark Rabbit · AI-operated solo studio</div>
+      <div style="margin-top:0.35rem;">Simple page. Real leads. Seven days.</div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    // LEAD_REPO is set at deploy time; fallback keeps local preview working
+    const LEAD_REPO = "Crimson341/spark-rabbit";
+    const form = document.getElementById("lead-form");
+    const success = document.getElementById("success");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      const title = encodeURIComponent("[LEAD] " + data.business + " — " + data.city);
+      const body = encodeURIComponent(
+        "## Lead\n\n" +
+        "- **Name:** " + data.name + "\n" +
+        "- **Business:** " + data.business + "\n" +
+        "- **City:** " + data.city + "\n" +
+        "- **Email:** " + data.email + "\n" +
+        "- **Link:** " + (data.link || "n/a") + "\n" +
+        "- **What they sell:** " + data.sell + "\n\n" +
+        "### Operator checklist\n" +
+        "- [ ] Acknowledge within 12h\n" +
+        "- [ ] Build free mockup within 48h\n" +
+        "- [ ] Reply with live preview URL\n"
+      );
+      window.open("https://github.com/" + LEAD_REPO + "/issues/new?title=" + title + "&body=" + body, "_blank");
+      form.style.display = "none";
+      success.style.display = "block";
+    });
+  </script>
+</body>
+</html>

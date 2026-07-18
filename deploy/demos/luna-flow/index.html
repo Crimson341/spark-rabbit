@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luna Flow Yoga — Sample Launch Page</title>
+  <meta name="description" content="Small-group yoga. Calm space. Real progress." />
+  <style>
+    :root { --bg:#f7f3ee; --ink:#1c1917; --muted:#6b635b; --accent:#0f766e; --card:#fff; --line:#e7e0d8; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:'Segoe UI', system-ui, sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    .wrap { width:min(980px,92%); margin:0 auto; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:1.2rem 0; }
+    .logo { font-weight:700; letter-spacing:-.02em; }
+    .logo span { color:var(--accent); }
+    .btn { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:.85rem 1.15rem; border-radius:999px; display:inline-block; }
+    .hero { padding:3.5rem 0 2.5rem; }
+    .eyebrow { color:var(--accent); font-size:.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:.8rem; }
+    h1 { font-size:clamp(2.2rem,5vw,3.4rem); letter-spacing:-.03em; line-height:1.08; max-width:14ch; margin-bottom:1rem; }
+    .lead { color:var(--muted); max-width:40ch; font-size:1.08rem; margin-bottom:1.4rem; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; padding-bottom:2.5rem; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:1.25rem; }
+    .card h3 { margin-bottom:.4rem; font-size:1.05rem; }
+    .card p { color:var(--muted); font-size:.94rem; }
+    .section { padding:1rem 0 3rem; }
+    .section h2 { font-size:1.7rem; margin-bottom:.75rem; letter-spacing:-.02em; }
+    .schedule { background:var(--card); border:1px solid var(--line); border-radius:18px; overflow:hidden; }
+    .row { display:flex; justify-content:space-between; padding:1rem 1.2rem; border-bottom:1px solid var(--line); }
+    .row:last-child { border-bottom:0; }
+    .row strong { font-weight:700; }
+    .muted { color:var(--muted); }
+    footer { padding:2rem 0 3rem; color:var(--muted); font-size:.88rem; border-top:1px solid var(--line); }
+    .badge { display:inline-block; margin-top:1rem; font-size:.75rem; color:var(--muted); border:1px dashed var(--line); padding:.4rem .7rem; border-radius:999px; background:#fff; }
+    @media (max-width:700px){ .grid{grid-template-columns:1fr;} .row{flex-direction:column; gap:.25rem;} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">Luna <span>Flow</span></div>
+      <a class="btn" href="mailto:hello@lunaflow.example">Reserve a mat</a>
+    </header>
+    <section class="hero">
+      <div class="eyebrow">Boutique studio · Max 12 per class</div>
+      <h1>Move slower. Feel stronger.</h1>
+      <p class="lead">Small-group yoga for beginners and burned-out overachievers. No ego. No giant mirrors shouting at you.</p>
+      <a class="btn" href="mailto:hello@lunaflow.example">Book your first class</a>
+      <div class="badge">Sample site by Spark Rabbit · not a real business</div>
+    </section>
+    <section class="grid">
+      <div class="card"><h3>Morning reset</h3><p>45-minute flows before work. Leave clearer than you arrived.</p></div>
+      <div class="card"><h3>Slow strength</h3><p>Hold, breathe, build. Mobility that shows up in real life.</p></div>
+      <div class="card"><h3>New-to-yoga friendly</h3><p>We explain every pose. No Sanskrit quiz required.</p></div>
+    </section>
+    <section class="section">
+      <h2>This week</h2>
+      <div class="schedule">
+        <div class="row"><strong>Mon 7:00am</strong><span class="muted">Morning Reset · 45m</span></div>
+        <div class="row"><strong>Wed 6:30pm</strong><span class="muted">Slow Strength · 60m</span></div>
+        <div class="row"><strong>Sat 9:30am</strong><span class="muted">All Levels Flow · 60m</span></div>
+      </div>
+    </section>
+    <footer>Luna Flow Yoga · Sample launch page · Built by Spark Rabbit</footer>
+  </div>
+</body>
+</html>

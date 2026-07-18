@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iron Cut Barbers — Sample Launch Page</title>
+  <meta name="description" content="Premium cuts. No appointment drama. Walk-ins welcome." />
+  <style>
+    :root { --bg:#0e0e10; --card:#17171b; --text:#f5f5f5; --muted:#a0a0a8; --accent:#e8c547; --border:#2a2a32; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:Georgia, 'Times New Roman', serif; background:var(--bg); color:var(--text); }
+    .wrap { width:min(980px,92%); margin:0 auto; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:1.25rem 0; border-bottom:1px solid var(--border); }
+    .logo { font-weight:700; letter-spacing:.08em; text-transform:uppercase; font-size:.95rem; }
+    .logo span { color:var(--accent); }
+    a.btn { background:var(--accent); color:#111; text-decoration:none; font-family:system-ui,sans-serif; font-weight:700; padding:.8rem 1.1rem; border-radius:4px; display:inline-block; }
+    .hero { padding:4.5rem 0 3rem; display:grid; gap:1rem; }
+    .eyebrow { font-family:system-ui,sans-serif; color:var(--accent); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; }
+    h1 { font-size:clamp(2.4rem,6vw,4rem); line-height:1.05; max-width:12ch; }
+    .lead { font-family:system-ui,sans-serif; color:var(--muted); max-width:38ch; font-size:1.05rem; }
+    .meta { font-family:system-ui,sans-serif; color:var(--muted); font-size:.9rem; margin-top:.5rem; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; padding:1rem 0 3rem; }
+    .card { background:var(--card); border:1px solid var(--border); padding:1.2rem; border-radius:8px; }
+    .card h3 { font-size:1.15rem; margin-bottom:.4rem; }
+    .card p { font-family:system-ui,sans-serif; color:var(--muted); font-size:.92rem; line-height:1.5; }
+    .section { padding:2rem 0 3rem; }
+    .section h2 { font-size:1.8rem; margin-bottom:1rem; }
+    .price-row { display:flex; justify-content:space-between; border-bottom:1px solid var(--border); padding:.75rem 0; font-family:system-ui,sans-serif; }
+    .price-row span:last-child { color:var(--accent); font-weight:700; }
+    footer { border-top:1px solid var(--border); padding:2rem 0; font-family:system-ui,sans-serif; color:var(--muted); font-size:.85rem; }
+    .badge { display:inline-block; margin-top:1rem; font-family:system-ui,sans-serif; font-size:.75rem; color:var(--muted); border:1px dashed var(--border); padding:.4rem .6rem; border-radius:999px; }
+    @media (max-width:700px){ .grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">Iron <span>Cut</span></div>
+      <a class="btn" href="tel:+15550102030">Book / Call</a>
+    </header>
+    <section class="hero">
+      <div class="eyebrow">Downtown · Est. 2019</div>
+      <h1>Sharp fades. Clean lines. Zero rush jobs.</h1>
+      <p class="lead">Classic barbershop energy with modern precision. Walk-ins welcome weekdays. Appointments on weekends.</p>
+      <p class="meta">Mon–Fri 10–7 · Sat 9–5 · 214 Main Street</p>
+      <div><a class="btn" href="tel:+15550102030">Call now</a></div>
+      <div class="badge">Sample site by Spark Rabbit · not a real business</div>
+    </section>
+    <section class="grid">
+      <div class="card"><h3>Skin fades</h3><p>Tight blends that stay clean for weeks. Senior barbers only on skin work.</p></div>
+      <div class="card"><h3>Beard sculpt</h3><p>Line-ups, hot towel finish, and product that doesn’t flake.</p></div>
+      <div class="card"><h3>Kids cuts</h3><p>Patient chairs, quick results, parents actually leave happy.</p></div>
+    </section>
+    <section class="section">
+      <h2>Menu</h2>
+      <div class="price-row"><span>Classic cut</span><span>$28</span></div>
+      <div class="price-row"><span>Skin fade</span><span>$35</span></div>
+      <div class="price-row"><span>Cut + beard</span><span>$45</span></div>
+      <div class="price-row"><span>Kids (12 & under)</span><span>$22</span></div>
+    </section>
+    <footer>
+      Iron Cut Barbers · Sample launch page · Built by Spark Rabbit
+    </footer>
+  </div>
+</body>
+</html>
