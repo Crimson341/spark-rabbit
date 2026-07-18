@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bright Mop Cleaning — Sample Launch Page</title>
+  <meta name="description" content="Reliable home cleaning. Clear pricing. Easy booking." />
+  <style>
+    :root { --bg:#f4f7fb; --ink:#0f172a; --muted:#64748b; --accent:#2563eb; --card:#fff; --line:#dbe3ef; --ok:#059669; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background:var(--bg); color:var(--ink); line-height:1.5; }
+    .wrap { width:min(980px,92%); margin:0 auto; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:1.15rem 0; }
+    .logo { font-weight:800; letter-spacing:-.03em; }
+    .logo span { color:var(--accent); }
+    .btn { background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:.85rem 1.1rem; border-radius:10px; display:inline-block; }
+    .btn.ghost { background:#fff; color:var(--ink); border:1px solid var(--line); }
+    .hero { padding:3.2rem 0 2rem; display:grid; gap:1rem; }
+    .eyebrow { color:var(--ok); font-size:.78rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+    h1 { font-size:clamp(2.1rem,5vw,3.3rem); letter-spacing:-.04em; line-height:1.05; max-width:16ch; }
+    .lead { color:var(--muted); max-width:42ch; font-size:1.05rem; }
+    .cta { display:flex; flex-wrap:wrap; gap:.7rem; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; padding:1rem 0 2.5rem; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.2rem; box-shadow:0 8px 24px rgba(15,23,42,.04); }
+    .card h3 { font-size:1.02rem; margin-bottom:.35rem; }
+    .card p { color:var(--muted); font-size:.93rem; }
+    .section { padding:1rem 0 2.5rem; }
+    .section h2 { font-size:1.6rem; letter-spacing:-.03em; margin-bottom:.8rem; }
+    .pricing { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .price { font-size:2rem; font-weight:800; letter-spacing:-.03em; color:var(--accent); }
+    footer { border-top:1px solid var(--line); padding:2rem 0 3rem; color:var(--muted); font-size:.88rem; }
+    .badge { display:inline-block; font-size:.75rem; color:var(--muted); border:1px dashed var(--line); padding:.4rem .7rem; border-radius:999px; background:#fff; width:fit-content; }
+    @media (max-width:700px){ .grid,.pricing{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">Bright <span>Mop</span></div>
+      <a class="btn" href="tel:+15550119876">Get a quote</a>
+    </header>
+    <section class="hero">
+      <div class="eyebrow">Insured · Supplies included · Same-week slots</div>
+      <h1>Your home, actually clean — on a schedule that sticks.</h1>
+      <p class="lead">Recurring and one-time cleaning for busy households. Transparent pricing. Text updates when we’re on the way.</p>
+      <div class="cta">
+        <a class="btn" href="tel:+15550119876">Text for availability</a>
+        <a class="btn ghost" href="#pricing">See pricing</a>
+      </div>
+      <div class="badge">Sample site by Spark Rabbit · not a real business</div>
+    </section>
+    <section class="grid">
+      <div class="card"><h3>Standard clean</h3><p>Kitchens, baths, floors, surfaces. The weekly reset that keeps chaos down.</p></div>
+      <div class="card"><h3>Deep clean</h3><p>Baseboards, appliances, detail work. Perfect before guests or move-in.</p></div>
+      <div class="card"><h3>Recurring plans</h3><p>Biweekly or monthly routes with the same team when possible.</p></div>
+    </section>
+    <section class="section" id="pricing">
+      <h2>Starting prices</h2>
+      <div class="pricing">
+        <div class="card">
+          <div class="price">$129</div>
+          <p style="color:var(--muted); margin-top:.35rem;">Standard clean · 1–2 bed home</p>
+        </div>
+        <div class="card">
+          <div class="price">$219</div>
+          <p style="color:var(--muted); margin-top:.35rem;">Deep clean · 1–2 bed home</p>
+        </div>
+      </div>
+    </section>
+    <footer>Bright Mop Cleaning · Sample launch page · Built by Spark Rabbit</footer>
+  </div>
+</body>
+</html>
